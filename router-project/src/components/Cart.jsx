@@ -27,7 +27,7 @@ const Cart = () => {
             }
             
             // If user IS logged in, fetch from server
-            const response = await fetch('http://localhost:3000/api/cart', {
+            const response = await fetch('http://13.51.161.113:3000/api/cart', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -91,7 +91,7 @@ const Cart = () => {
         
         // Handle server cart (authenticated user)
         try {
-            const response = await fetch(`http://localhost:3000/api/cart/${id}`, {
+            const response = await fetch(`http://13.51.161.113:3000/api/cart/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ const Cart = () => {
         
         // Handle server cart (authenticated user)
         try {
-            const response = await fetch(`http://localhost:3000/api/cart/${id}`, {
+            const response = await fetch(`http://13.51.161.113:3000/api/cart/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -159,7 +159,7 @@ const Cart = () => {
         
         // Handle server cart (authenticated user)
         try {
-            const response = await fetch('http://localhost:3000/api/cart/clear/all', {
+            const response = await fetch('http://13.51.161.113:3000/api/cart/clear/all', {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

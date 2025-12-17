@@ -37,7 +37,7 @@ const AddProductForm = () => {
             setLoading(true);
             const token = localStorage.getItem('token');
             
-            const response = await fetch('http://localhost:3000/products', {
+            const response = await fetch('http://13.51.161.113:3000/products', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

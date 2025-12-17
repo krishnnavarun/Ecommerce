@@ -12,7 +12,7 @@ const Products = () => {
     const fetchProducts = async () => {
         try {
             setLoading(true);
-            const response = await fetch('http://localhost:3000/products');
+            const response = await fetch('http://13.51.161.113:3000/products');
             const data = await response.json();
             setProducts(data);
         } catch (error) {
@@ -50,7 +50,7 @@ const Products = () => {
             }
             
             // If user is logged in, add to server cart
-            const response = await fetch('http://localhost:3000/api/cart', {
+            const response = await fetch('http://13.51.161.113:3000/api/cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

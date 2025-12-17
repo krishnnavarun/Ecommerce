@@ -20,7 +20,7 @@ const LoginForm = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('http://localhost:3000/api/auth/login', {
+            const response = await fetch('http://13.51.161.113:3000/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const LoginForm = () => {
                 const guestCart = JSON.parse(localStorage.getItem('guestCart') || '[]');
                 if (guestCart.length > 0) {
                     for (const item of guestCart) {
-                        await fetch('http://localhost:3000/api/cart', {
+                        await fetch('http://13.51.161.113:3000/api/cart', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
